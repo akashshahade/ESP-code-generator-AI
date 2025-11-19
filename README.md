@@ -147,48 +147,6 @@ arduino_code_generator/
 └── .env                  # Your actual API key (CREATE THIS FILE)
 ```
 
-## Important Security Notes 🔒
-
-- **NEVER** commit the `.env` file to version control
-- **NEVER** share your API key publicly
-- If you accidentally expose your key, regenerate it immediately from [Google AI Studio](https://aistudio.google.com/app/apikey)
-- Use `.env` file for local development only
-
-## Troubleshooting 🔧
-
-### Error: "GEMINI_API_KEY not found"
-- Ensure `.env` file exists in the project directory
-- Verify the file contains: `GEMINI_API_KEY=your_key`
-- Make sure there are no spaces around the `=` sign
-- Restart the Streamlit app after creating/modifying `.env`
-
-### Error: "API Key invalid or expired"
-- Check your API key in [Google AI Studio](https://aistudio.google.com/app/apikey)
-- Regenerate a new key if needed
-- Ensure the key is correctly pasted without extra spaces
-
-### Streamlit not found
-- Install Streamlit: `pip install -r requirements.txt`
-- Verify installation: `streamlit --version`
-
-### Port 8501 already in use
-- Use a different port: `streamlit run app.py --server.port 8502`
-
-## API Limits ⚠️
-
-Google Gemini API has usage limits:
-- Free tier: 60 requests per minute
-- For production use, check Google's pricing and quota management
-
-## Customization 🎨
-
-To modify the application:
-
-1. **Add More Boards**: Edit the `board_type` selectbox in the sidebar
-2. **Add More Project Types**: Edit the `project_type` selectbox in the sidebar
-3. **Customize Styling**: Modify the CSS in the `st.markdown()` section
-4. **Change System Prompt**: Edit the `system_prompt` variable to adjust AI behavior
-
 ## Required Python Packages
 
 - `streamlit==1.32.0` - Web framework (Latest stable)
@@ -209,3 +167,4 @@ This project is open source and available for personal and educational use.
 ---
 
 **Happy Coding! 🚀**
+
